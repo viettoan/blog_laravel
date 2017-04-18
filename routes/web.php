@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return View::make('admin.add-user', array('name' => 'Taylor'));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+Route::resource('admin/user', 'AddUserController' );
+

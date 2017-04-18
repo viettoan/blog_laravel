@@ -80,7 +80,14 @@
             </div>
         </nav>
 
-        <?php echo $__env->yieldContent('content'); ?>
+        <div class="container-fluid">
+            <div class="row">
+                <?php echo $__env->yieldContent('sidebar'); ?>
+                <?php echo $__env->yieldContent('content'); ?>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Scripts -->

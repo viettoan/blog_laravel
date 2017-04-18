@@ -78,7 +78,14 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container-fluid">
+            <div class="row">
+                @yield('sidebar')
+                @yield('content')
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Scripts -->
