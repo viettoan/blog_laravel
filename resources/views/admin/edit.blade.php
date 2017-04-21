@@ -29,17 +29,14 @@
                 <input type="email" class="form-control" name="email" placeholder="Enter email" value="{{ $user->email }}" required>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Password" value="{{ $user->password }}"required>
-            </div>
-            <div class="form-group">
                 <label for="exampleInputFile">Avatar</label>
                 <input type="file" name="avatar" >
-                <img src="{{ asset($user->avatar) }}">
+                <img src="@if(!empty($user->avatar)) {{  asset($user->avatar) }} @endif">
             </div>
             <div>
                 <label>Level</label>
                 <div class="radio">
+
                     <label>
                         <input type="radio" name="level" value="1" >Admin
                     </label>
@@ -49,6 +46,9 @@
                         <input type="radio" name="level" value="0" >User
                     </label>
                 </div>
+                @if ($user->level == 1){
+                            
+                }
             </div>
 
             <button type="submit" class="btn btn-default">Edit</button>

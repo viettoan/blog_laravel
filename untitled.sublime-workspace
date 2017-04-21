@@ -88,36 +88,30 @@
 	"buffers":
 	[
 		{
-			"file": "app/User.php",
+			"contents": "<?php\n// Array with names\n$a[] = \"Anna\";\n$a[] = \"Brittany\";\n$a[] = \"Cinderella\";\n$a[] = \"Diana\";\n$a[] = \"Eva\";\n$a[] = \"Fiona\";\n$a[] = \"Gunda\";\n$a[] = \"Hege\";\n$a[] = \"Inga\";\n$a[] = \"Johanna\";\n$a[] = \"Kitty\";\n$a[] = \"Linda\";\n$a[] = \"Nina\";\n$a[] = \"Ophelia\";\n$a[] = \"Petunia\";\n$a[] = \"Amanda\";\n$a[] = \"Raquel\";\n$a[] = \"Cindy\";\n$a[] = \"Doris\";\n$a[] = \"Eve\";\n$a[] = \"Evita\";\n$a[] = \"Sunniva\";\n$a[] = \"Tove\";\n$a[] = \"Unni\";\n$a[] = \"Violet\";\n$a[] = \"Liza\";\n$a[] = \"Elizabeth\";\n$a[] = \"Ellen\";\n$a[] = \"Wenche\";\n$a[] = \"Vicky\";\n\n// get the q parameter from URL\n$q = $_REQUEST[\"q\"];\n\n$hint = \"\";\n\n// lookup all hints from array if $q is different from \"\" \nif ($q !== \"\") {\n    $q = strtolower($q);\n    $len=strlen($q);\n    foreach($a as $name) {\n        if (stristr($q, substr($name, 0, $len))) {\n            if ($hint === \"\") {\n                $hint = $name;\n            } else {\n                $hint .= \", $name\";\n            }\n        }\n    }\n}\n\n// Output \"no suggestion\" if no hint was found or output correct values \necho $hint === \"\" ? \"no suggestion\" : $hint;\n?>",
+			"file": "/opt/lampp/htdocs/gethint.php",
+			"file_size": 1060,
+			"file_write_time": 131372126843627552,
 			"settings":
 			{
-				"buffer_size": 570,
+				"buffer_size": 1060,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/opt/lampp/htdocs/sethint.html",
+			"settings":
+			{
+				"buffer_size": 749,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/opt/lampp/htdocs/test.php",
+			"settings":
+			{
+				"buffer_size": 48,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/admin/add-user.blade.php",
-			"settings":
-			{
-				"buffer_size": 1722,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/AddUserController.php",
-			"settings":
-			{
-				"buffer_size": 590,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/Auth/RegisterController.php",
-			"settings":
-			{
-				"buffer_size": 1846,
 				"line_ending": "Unix"
 			}
 		}
@@ -167,6 +161,11 @@
 	],
 	"file_history":
 	[
+		"/opt/lampp/htdocs/sethint.html",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Auth/RegisterController.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/AddUserController.php",
+		"/opt/lampp/htdocs/blog_laravel/app/User.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/admin/add-user.blade.php",
 		"/opt/lampp/htdocs/blog_laravel/resources/views/admin.blade.php",
 		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Controller.php",
 		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/HomeController.php",
@@ -210,24 +209,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/User.php",
+					"file": "/opt/lampp/htdocs/gethint.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 570,
+						"buffer_size": 1060,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								543,
-								543
+								1060,
+								1060
 							]
 						],
 						"settings":
@@ -240,16 +239,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/admin/add-user.blade.php",
+					"file": "/opt/lampp/htdocs/sethint.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1722,
+						"buffer_size": 749,
 						"regions":
 						{
 						},
@@ -262,32 +261,30 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 364.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/Http/Controllers/AddUserController.php",
+					"file": "/opt/lampp/htdocs/test.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 590,
+						"buffer_size": 48,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								13,
+								13
 							]
 						],
 						"settings":
@@ -298,37 +295,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/Auth/RegisterController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1846,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1092.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

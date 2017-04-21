@@ -92,5 +92,7 @@
 
     <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/main.js')); ?>"></script>
 </body>
 </html>

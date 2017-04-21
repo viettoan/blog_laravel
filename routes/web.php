@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return View::make('admin.add-user', array('name' => 'Taylor'));
+    return View('welcome');
 });
 
 Auth::routes();

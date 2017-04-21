@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="col-sm-9 col-md-10 content">
-        <table class="table">
+        <table id="index" class="table">
             <thead>
                 <th>ID</th>
                 <th>Name</th>
@@ -28,15 +28,17 @@
                             {{ $user->level }}
                         </td>
                         <td>
-                            <a class="btn btn-danger" href="{{ route('user.destroy', ['id' => $user->id]) }}">Delete</a>
+                            <button class="btn btn-danger del" data-id="{{ $user->id }}" >Delete</button>
                         </td>
                         <td>
                             <a class="btn btn-info" href="{{ route('user.edit', ['id' => $user->id]) }}">Edit</a>
                         </td>
                     </tr>
+
                 @endforeach
             </tbody>
         </table>
+
         {{ $users->links() }}
     </div>
 

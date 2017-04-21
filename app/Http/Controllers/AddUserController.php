@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,9 +11,9 @@ use App\Http\Controllers\Controller;
 
 class AddUserController extends Controller
 {
-    public function index()
+    public function index()                                                                                                                                                                                                                                                                                                                                                                                                                                                             
     {
-        $users=User::paginate(5);
+        $users=User::paginate(2);
 
         return view('admin.index', compact('users'));
     }
@@ -55,13 +56,16 @@ class AddUserController extends Controller
     {
         $user = User::where('id', $id)->first();
         $user->delete();
-        return redirect()->route('user.index');
+        return response()->json([
+            'success' => 'Record has been deleted successfully!'
+        ]);
 
     }
 
     public function edit($id)
     {
         $user = User::where('id', $id)->first();
+        $user->password = $user->password;
 
         return view('admin.edit', compact('user') );
     }
