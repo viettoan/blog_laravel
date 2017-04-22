@@ -2,6 +2,7 @@
 @extends('layouts.sidebar')
 
 @section('content')
+
     <div class="col-sm-9 col-md-10 content">
         <form role="form" method="POST" action="{{ route('user.update', ['id' => $user->id])  }}" enctype="multipart/form-data">
             {{ csrf_field() }}
@@ -46,9 +47,7 @@
                         <input type="radio" name="level" value="0" >User
                     </label>
                 </div>
-                @if ($user->level == 1){
-                            
-                }
+
             </div>
 
             <button type="submit" class="btn btn-default">Edit</button>
