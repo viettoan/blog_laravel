@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    $('.del').click(function () {
-        var id=$(this).data('id');
+    //delete with ajax
+    $(".del").click(function () {
+        var id=$(this).data("id");
         $.ajax(
             {
-                type : 'GET',
+                type : "GET",
                 url : "/admin/user/"+id,
                 async : false,
                 data : id,
@@ -13,4 +14,27 @@ $(document).ready(function () {
             }
         );
     });
+
+    //search 
+    $("#search").keyup(function(){
+       if($(this).val().length>0){
+            
+            $.ajax({
+                type : "GET",
+                url : '/admin/user/search',
+                async : false,
+                data : {'search':$(this).val()} ,
+                success : function (data) {
+                   
+                        $("#result").html(data);
+
+                }
+            });
+       }
+       else 
+       {
+         $("#result").html(''); 
+       } 
+        
+    })
 });

@@ -11,11 +11,12 @@ use App\Http\Controllers\Controller;
 
 class AddUserController extends Controller
 {
-    public function index()                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    public function index()                                
     {
         $users=User::paginate(2);
 
         return view('admin.index', compact('users'));
+      
     }
 
     public function create()
@@ -103,6 +104,24 @@ class AddUserController extends Controller
         }
         else{
             return view('admin.add-user',['email'=>'Email bi trung']);
+        }
+    }
+
+    public function search(Request $request)
+    {
+        if($request->ajax()){
+            $output="";
+            $keyword=$request->search;
+            $users=User::where('name', 'like', "%$keyword%")->get();
+
+            if($users){
+                foreach ($users as $key => $user) {
+                    $output.='<li>'.$user->name.'</li>';
+                }
+                return response($output);
+            }
+            
+            
         }
     }
 

@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"res",
+				"response"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"sear",
+				"search-data"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"print",
+				"printf"
+			],
+			[
 				"local",
 				"localhost"
 			],
@@ -68,10 +92,6 @@
 				"edit_quyen"
 			],
 			[
-				"in",
-				"IN"
-			],
-			[
 				"get",
 				"getElementById"
 			],
@@ -88,29 +108,37 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n// Array with names\n$a[] = \"Anna\";\n$a[] = \"Brittany\";\n$a[] = \"Cinderella\";\n$a[] = \"Diana\";\n$a[] = \"Eva\";\n$a[] = \"Fiona\";\n$a[] = \"Gunda\";\n$a[] = \"Hege\";\n$a[] = \"Inga\";\n$a[] = \"Johanna\";\n$a[] = \"Kitty\";\n$a[] = \"Linda\";\n$a[] = \"Nina\";\n$a[] = \"Ophelia\";\n$a[] = \"Petunia\";\n$a[] = \"Amanda\";\n$a[] = \"Raquel\";\n$a[] = \"Cindy\";\n$a[] = \"Doris\";\n$a[] = \"Eve\";\n$a[] = \"Evita\";\n$a[] = \"Sunniva\";\n$a[] = \"Tove\";\n$a[] = \"Unni\";\n$a[] = \"Violet\";\n$a[] = \"Liza\";\n$a[] = \"Elizabeth\";\n$a[] = \"Ellen\";\n$a[] = \"Wenche\";\n$a[] = \"Vicky\";\n\n// get the q parameter from URL\n$q = $_REQUEST[\"q\"];\n\n$hint = \"\";\n\n// lookup all hints from array if $q is different from \"\" \nif ($q !== \"\") {\n    $q = strtolower($q);\n    $len=strlen($q);\n    foreach($a as $name) {\n        if (stristr($q, substr($name, 0, $len))) {\n            if ($hint === \"\") {\n                $hint = $name;\n            } else {\n                $hint .= \", $name\";\n            }\n        }\n    }\n}\n\n// Output \"no suggestion\" if no hint was found or output correct values \necho $hint === \"\" ? \"no suggestion\" : $hint;\n?>",
-			"file": "/opt/lampp/htdocs/gethint.php",
-			"file_size": 1060,
-			"file_write_time": 131372126843627552,
+			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 1060,
+				"buffer_size": 1241,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/opt/lampp/htdocs/sethint.html",
+			"file": "resources/views/admin/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 749,
+				"buffer_size": 1761,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/opt/lampp/htdocs/test.php",
+			"file": "app/Http/Controllers/AddUserController.php",
 			"settings":
 			{
-				"buffer_size": 48,
+				"buffer_size": 3497,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/js/main.js",
+			"settings":
+			{
+				"buffer_size": 999,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -153,22 +181,42 @@
 		"/opt/lampp/htdocs/blog_laravel/app/Http",
 		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers",
 		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Auth",
-		"/opt/lampp/htdocs/blog_laravel/bootstrap",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Middleware",
+		"/opt/lampp/htdocs/blog_laravel/database/migrations",
+		"/opt/lampp/htdocs/blog_laravel/public",
+		"/opt/lampp/htdocs/blog_laravel/public/js",
 		"/opt/lampp/htdocs/blog_laravel/resources",
+		"/opt/lampp/htdocs/blog_laravel/resources/assets",
+		"/opt/lampp/htdocs/blog_laravel/resources/assets/js",
 		"/opt/lampp/htdocs/blog_laravel/resources/views",
 		"/opt/lampp/htdocs/blog_laravel/resources/views/admin",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/layouts",
 		"/opt/lampp/htdocs/blog_laravel/routes"
 	],
 	"file_history":
 	[
-		"/opt/lampp/htdocs/sethint.html",
-		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Auth/RegisterController.php",
-		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/AddUserController.php",
-		"/opt/lampp/htdocs/blog_laravel/app/User.php",
-		"/opt/lampp/htdocs/blog_laravel/resources/views/admin/add-user.blade.php",
+		"/opt/lampp/htdocs/blog_laravel/public/js/main.js",
 		"/opt/lampp/htdocs/blog_laravel/resources/views/admin.blade.php",
-		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Controller.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/admin/searchUsers.blade.php",
+		"/opt/lampp/htdocs/sethint.html",
 		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/HomeController.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/layouts/app.blade.php",
+		"/opt/lampp/htdocs/blog_laravel/app/User.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Product.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Booking.php",
+		"/opt/lampp/htdocs/php/gethint.php",
+		"/opt/lampp/htdocs/blog_laravel/routes/web.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/AddUserController.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/home.blade.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/ProductsController.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/admin/edit.blade.php",
+		"/opt/lampp/htdocs/blog_laravel/database/migrations/2017_04_24_061200_create_booking.php",
+		"/opt/lampp/htdocs/blog_laravel/database/migrations/2017_04_20_145856_create_product_table.php",
+		"/opt/lampp/htdocs/test.php",
+		"/opt/lampp/htdocs/gethint.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Auth/RegisterController.php",
+		"/opt/lampp/htdocs/blog_laravel/resources/views/admin/add-user.blade.php",
+		"/opt/lampp/htdocs/blog_laravel/app/Http/Controllers/Controller.php",
 		"/opt/lampp/htdocs/blog_laravel/untitled.sublime-project",
 		"/opt/lampp/htdocs/blog_laravel/blog_laravel.sublime-project",
 		"/opt/lampp/htdocs/blog/.env",
@@ -178,13 +226,14 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"<current file>"
 		]
 	},
 	"find_state":
@@ -192,6 +241,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -199,6 +249,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -209,24 +260,52 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/opt/lampp/htdocs/gethint.php",
+					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1060,
+						"buffer_size": 1241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1060,
-								1060
+								860,
+								860
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/admin/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1733,
+								1733
 							]
 						],
 						"settings":
@@ -239,60 +318,64 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/opt/lampp/htdocs/sethint.html",
+					"buffer": 2,
+					"file": "app/Http/Controllers/AddUserController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 749,
+						"buffer_size": 3497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3136,
+								3136
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2109.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/opt/lampp/htdocs/test.php",
+					"buffer": 3,
+					"file": "resources/assets/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 48,
+						"buffer_size": 999,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13,
-								13
+								647,
+								647
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -303,7 +386,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -340,7 +423,7 @@
 	"project": "untitled.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -378,7 +461,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 249.0,
+	"side_bar_width": 287.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

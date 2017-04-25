@@ -19,6 +19,12 @@
             'csrfToken' => csrf_token(),
         ]); ?>;
     </script>
+
+    <!-- Scripts -->
+    
+    <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('js/main.js')); ?>"></script>
+    
 </head>
 <body>
     <div id="app">
@@ -90,9 +96,6 @@
 
     </div>
 
-    <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
-    <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('js/main.js')); ?>"></script>
 </body>
 </html>
